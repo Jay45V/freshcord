@@ -60,7 +60,7 @@ code span {
 }
 
 .platform-win .bg_d4b6c5 {
-  top: -34px;
+  top: -1000px;
 }
 
 /*Discord Wordmark*/
@@ -69,12 +69,12 @@ code span {
 }
 
 .wordmark_a934d8 {
-  padding: 7px 9px 3px;
+  padding: 5px 12px 3px;
 }
 
 .wordmark_a934d8::after {
   content: var(--fc-wordmark-text);
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
   font-family: var(--fc-wordmark-font);
   color: var(--fc-wordmark-color);
@@ -83,32 +83,15 @@ code span {
   position: relative;
 }
 
-/*Server List*/
-.guilds_a4d4d9,
-.listItem_c96c45 {
+/*Titlebar Buttons*/
+.winButtonClose_a934d8,
+.winButtonMinMax_a934d8 {
+  height: 34px;
   width: 50px;
 }
 
-.wrapper_b7c66a,
-.svg_c5f96a {
-  width: 33px;
-}
-
-.wrapper_c5f96a {
-  width: 33px;
-  height: 33px;
-}
-
-.expandedFolderBackground_bc7085 {
-  width: 33px;
-  left: 9px;
-}
-
-.listItem_c96c45 {
-  margin: 0 0 8px;
-}
-
-.wrapper_f90abb {
-  width: 50px;
-  height: 50px;
+.winButtonClose_a934d8 svg,
+.winButtonMinMax_a934d8 svg {
+  height: 20px;
+  width: 20px;
 }

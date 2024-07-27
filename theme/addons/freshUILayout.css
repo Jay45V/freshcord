@@ -1,0 +1,29 @@
+@import url("https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css");
+@import url("https://discordstyles.github.io/Addons/bottomhsl.css");
+/*Makes the Horizontal Server List be on the bottom instead of the top. Add a comment around it to put it on the top.*/
+
+/*Config*/
+:root {
+  --fc-elements-order: 1;
+  /*The order of the channel list, member list, and server list(if horizontal server list is disabled). Set to 1 for reversed or 0 for normal Discord.*/
+}
+
+/*Horizontal Server List Config*/
+:root {
+  --HSL-server-icon-size: 48px;
+  --HSL-server-spacing: 15px;
+  --HSL-server-direction: column;
+}
+
+/*Reverse the order of Discord's Layout*/
+.guilds_a4d4d9 {
+  order: var(--fc-elements-order);
+}
+
+.sidebar_a4d4d9 {
+  order: var(--fc-elements-order);
+}
+
+.chatContent_a7d72e {
+  order: var(--fc-elements-order);
+}

@@ -3,11 +3,21 @@
 * @author Jay45V
 * @description Enhances the Discord UI with a fresh new look
 * @version 0.0.1
+* @source https://github.com/Jay45V/freshcord
 **/
 
 /*Imports*/
 @import url('fonts.css');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css");
+@import url("https://discordstyles.github.io/Addons/bottomhsl.css");
+
+/*Horizontal Server List Config*/
+:root {
+  --HSL-server-icon-size: 48px;
+  --HSL-server-spacing: 15px;
+  --HSL-server-direction: column;
+}
 
 /*Variables*/
 :root {
@@ -15,6 +25,7 @@
   --fc-wordmark-text: "Freshcord";
   --fc-wordmark-color: none;
   --fc-wordmark-font: "Arial";
+  --fc-main-accent: rgb(0, 153, 255);
 }
 
 /*Custom Font*/
@@ -94,4 +105,24 @@ code span {
 .winButtonMinMax_a934d8 svg {
   height: 20px;
   width: 20px;
+}
+
+/*Reverse the order of Discord's Layout*/
+.guilds_a4d4d9 {
+  order: 1;
+}
+
+.sidebar_a4d4d9 {
+  order: 1;
+}
+
+.chatContent_a7d72e {
+  order: 1;
+}
+
+/*Set the color of discord ui elements*/
+:root {
+  --background-primary: rgb(26, 26, 26);
+  --background-secondary: rgb(37, 37, 37);
+  --background-tertiary: rgb(14, 14, 14);
 }

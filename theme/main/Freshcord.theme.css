@@ -2,29 +2,27 @@
 * @name Freshcord
 * @author Jay45V
 * @description Enhances the Discord UI with a fresh new look
-* @version 0.0.1
+* @version 0.1.0
 * @source https://github.com/Jay45V/freshcord
 **/
 
 /*Imports*/
-@import url('fonts.css');
+@import url('https://jay45v.github.io/freshcord/theme/addons/freshUILayout.css');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url("https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css");
-@import url("https://discordstyles.github.io/Addons/bottomhsl.css");
-
-/*Horizontal Server List Config*/
-:root {
-  --HSL-server-icon-size: 48px;
-  --HSL-server-spacing: 15px;
-  --HSL-server-direction: column;
-}
+/*Imports the fonts used by Freshcord*/
 
 /*Variables*/
 :root {
   --fc-main-font: "DM Sans";
+  /*The main font used by Freshcord. You can use any font you have installed on your device.*/
+  --fc-main-font-size: 5px;
+  /*The size of the font Freshcord uses.*/
   --fc-wordmark-text: "Freshcord";
+  /*The text to replace "Discord" in the top left corner.*/
   --fc-wordmark-color: none;
-  --fc-wordmark-font: "Arial";
+  /*The color of the text in the top left corner.*/
+  --fc-wordmark-font: "DM Sans";
+  /*The font of the text in the top left corner*/
   --fc-main-accent: rgb(0, 153, 255);
 }
 
@@ -52,6 +50,7 @@ span,
 div,
 main {
   font-family: var(--fc-main-font) !important;
+  font-size: 15px;
 }
 
 h1 span,
@@ -107,22 +106,31 @@ code span {
   width: 20px;
 }
 
-/*Reverse the order of Discord's Layout*/
-.guilds_a4d4d9 {
-  order: 1;
-}
-
-.sidebar_a4d4d9 {
-  order: 1;
-}
-
-.chatContent_a7d72e {
-  order: 1;
-}
-
 /*Set the color of discord ui elements*/
-:root {
-  --background-primary: rgb(26, 26, 26);
-  --background-secondary: rgb(37, 37, 37);
-  --background-tertiary: rgb(14, 14, 14);
+.theme-dark {
+  --background-primary: rgb(20, 21, 26);
+  --background-secondary: rgb(37, 41, 49);
+  --background-tertiary: rgb(29, 34, 48);
+}
+
+.theme-light {
+  --background-primary: rgb(180, 180, 180);
+  --background-secondary: rgb(206, 206, 206);
+  --background-tertiary: rgb(197, 197, 197);
+}
+
+/*Messages*/
+.message_d5deea {
+  background-color: var(--background-tertiary);
+}
+
+.messageListItem_d5deea>.message_d5deea.groupStart_d5deea {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.messageListItem_d5deea:has(+ .messageListItem_d5deea > .message_d5deea.groupStart_d5deea)>.message_d5deea,
+.messageListItem_d5deea:has(+ :not(.messageListItem_d5deea))>.message_d5deea {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
